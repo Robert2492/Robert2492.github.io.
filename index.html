@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+          <div class="header">
+              <img class="logo_header" src="img/Logo.png">
+          </div>
+        </div>
+    </header>
+
+
+    <main>
+        <article class="main">
+        
+             <section class="campo-mensaje" id="msjcCampo">
+            
+               <textarea  class="texto-ingresado" id="inputTexto" placeholder="Texto a encriptar" onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32)" autofocus></textarea>
+             
+                   <div class="items-mensaje">
+                    <span class ="advertencia">
+                     <img src="img/bi_exclamation-circle-fill-1.png" alt="advertencia">
+                     Solo letras Minúsculas y sin acentos
+                    </span>
+                  <div class="btns-mensaje">
+                    <button id="btnEncriptar"  class="btnEncriptar">Encriptar</button>
+                    <button id="btnDesencriptar" class="btnDesencriptar">Desencriptar</button>
+                 </div>
+                 
+                 </div>
+ 
+            </section>
+
+            <section class="campo-mensaje-encriptado" id="msjEncriptado">
+
+             <img id="img-diamante" class="img-diamante" src="img/Muñeco.png"alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
+             <textarea id="msj-encriptado" class="msj-encriptado" placeholder="Ningún mensaje fue encontrado"></textarea>
+             <p id="advertencia" class="advertencia">Ingresa el texto que desees encriptar o desencriptar.</p>
+             <button class="btn-copiar btn-ocultar" id="btn-copia" >Copiar</button>
+
+
+            </section>
+
+        </article>  
+
+    </main>
+    <footer class="footer">
+      <p class="creador">&copy; CopyRight Roberto |  2024  | Para Alura Latam.</p>
+      <a href="https://github.com/Robert2492" target="_blank" class="usuario">
+        <img class="link" src="img/github-mark/github-mark-blue.png"> </a>
+
+    </footer>
+
+      <script src="js/app.js"></script>
+</body>
+</html>

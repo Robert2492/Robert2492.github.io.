@@ -1,0 +1,294 @@
+.inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: 1px;
+	line-height: 1.3;
+	font-family:"Inter", sans-serif;
+	text-decoration: none;
+}
+
+body{
+  background-color: #F3F5FC;
+}
+
+header{
+  width: 100%;
+}
+.containerHeader{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-end;
+	height: 80px;
+}
+.header { 
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+
+}
+.logo_header{
+
+ max-height: 45px;
+ height: 100%;
+ min-height: 40px;
+
+}
+.main{
+  margin: auto 40px auto auto;
+  width: 90%;
+  align-items: end;
+  min-height: calc(100vh - 80px - 56px);
+  grid-template-columns:  2.5fr 1fr;
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+ 
+.campo-mensaje{
+  width: 100%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.texto-ingresado{
+  width: 100%;
+  max-height: 350px;
+	min-height: 50px;
+  font-size: 32px;
+  color: #0A3871;
+  resize: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family:"Inter", sans-serif ;
+
+}
+.texto-ingresado::placeholder{
+   color:  #0A3871;
+   
+}
+.items-mensaje{
+  min-height: 80px;
+}
+.advertencia{
+  display: flex;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+	font-size: 14px;
+	color: #495057;
+  
+}
+
+.btns-mensaje{
+  display: flex;
+	justify-content: space-evenly;
+	padding: .8rem;
+	flex-wrap: wrap;
+	gap: .8rem;
+}
+.btn-copiar:hover{
+
+  background: #D8DFE8;
+  transform: scale(1.1);
+}
+
+.btnEncriptar,
+.btnDesencriptar,
+.btn-copiar {
+  width: 45%;
+	max-width: 328px;
+	min-width: 160px;
+	height: 67px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 24px;
+	border: none;
+	outline: 1px solid #0A3871;
+	background: #0A3871;
+	color: white;
+  cursor: pointer;
+ 
+}
+.btnDesencriptar{
+  background-color: #D8DFE8;
+  color: #0A3871;
+  cursor: pointer;
+}
+.btn-copiar{
+
+  width: 100%;
+  min-width: 100px;
+  background:none;
+  color: #0A3871;
+  cursor: pointer;
+  transition: 1s all;
+  
+
+}
+.btn-ocultar {
+	display: none;
+}
+
+
+.campo-mensaje-encriptado{
+  background: #ffffff;
+  align-items: center;
+  width: 100%;
+  height: calc(100% + 60px) ;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	padding: 16px;
+	gap: 32px;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.ajuste{
+	justify-content: space-between;
+}
+
+.img-diamante{
+  min-width: 230px;
+  width: 50%;
+}
+.ocultar{
+	display: none;
+}
+
+.msj-encriptado{
+  width: 100%;
+	font-size: 24px;
+	color: #343A40;
+	border: none;
+	outline: none;
+  overflow: hidden;
+  text-align: center;
+	resize: none;
+	pointer-events: none;
+  font-family: "Inter", sans-serif ;
+
+}
+.msj-encriptado::placeholder{
+  color:#343A40
+}
+.ajustar {
+	height: auto;
+	min-height: calc(100% - 67px - 32px);
+	pointer-events: all;
+	text-align: left;
+	overflow: auto;
+}
+
+
+
+footer{
+
+  width: 100%;
+	min-height: 56px;
+	height: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.creador{
+	font-size: 16px;
+  font-style:"Inter", bold ;
+  color: #0A3871;
+  margin: 10px;
+ 
+  
+}
+.usuario{
+	color: #0A3871;
+	font-style:"Inter", bold;
+}
+
+
+@media screen and (max-width: 840px){
+
+  .main{
+   grid-template-columns:1fr;
+   grid-template-rows: 64% auto;
+   margin: auto ;
+
+  }
+  .texto-ingresado{
+    max-height: 270px;
+    font-size: 26px;
+  }
+  .advertencia{
+  font-size: 12px;
+  }
+  .campo-mensaje-encriptado{
+    height: 100%;
+  }
+  .campo-mensaje-encriptado.ajustar{
+    height: 100%;
+  }
+  .img-diamante{
+    display: none;
+  }
+  .msj-encriptado{
+    font-size: 18px;
+
+  }
+  .creador{
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width: 440px){
+
+  .btnEncriptar,
+  .btnDesencriptar,
+  .btn-copiar {
+    width: 100%;
+    height: 50px;
+    border-radius: 19px;
+    font-size: 14px;
+  }
+  .texto-ingresado{
+    max-height: 200px;
+    font-size: 20px;
+  }
+  .advertencia{
+    font-size: 16px;
+  }
+.msj-encriptado{
+
+  font-size: 16px;
+}
+
+}
+@media screen and (max-width: 230px) {
+  .btnEncriptar,
+  .btnDesencriptar,
+  .btn-copiar {
+    width: 100%;
+    min-width: 100%;
+    height: 40px;
+    border-radius: 14px;
+    font-size: 12px;
+    
+  
+}
+}
